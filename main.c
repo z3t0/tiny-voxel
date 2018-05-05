@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 int main() {
@@ -16,6 +17,14 @@ int main() {
   GLFWwindow* window = glfwCreateWindow(800, 600, "tiny voxel", NULL, NULL);
 
   glfwMakeContextCurrent(window);
+
+  // GLEW: Determines available OpenGL functions on machine
+  glewExperimental = GL_TRUE;
+  glewInit();
+
+  GLuint vertexBuffer;
+  glGenBuffers(1, &vertexBuffer);
+  printf("%u\n", vertexBuffer);
 
   // Event Loop
   while(!glfwWindowShouldClose(window)) {
