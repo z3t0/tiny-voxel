@@ -3,7 +3,10 @@
 High efficiency 3d cube rendering experiment
 
 ## Build Instructions
-Dependencies: CMake
+Dependencies: 
+- CMake
+- GLFW
+- GLEW
 
 ``` shell
 CMake -G Unix\ Makefiles
