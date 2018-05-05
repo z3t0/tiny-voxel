@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <GLFW/glfw3.h>
+#include<unistd.h>
 
 int main() {
-  printf("Hello, world\n");
 
+  glfwInit();
+  sleep(5);
+  glfwTerminate();
 }
